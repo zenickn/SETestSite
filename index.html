@@ -30,10 +30,16 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class ="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class ="fa fa-home fa-lg"></span>Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
-                </span>
+                
+               
+
+                <button class="btn btn-sm" id="logininbtn">
+                    <span class="navbar-text">
+                        <span class="fa fa-sign-in"></span> Login
+                    </span>
+                </button>
+
+              
             </div>
                 
         </div>
@@ -136,7 +142,9 @@
                         
                         <div class="form-group row">
                            <div class="offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 <button type="submit" class="btn btn-primary">Reserve</button>
+                                
                            </div>
                         </div>
                     </form>
@@ -163,10 +171,16 @@
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reserveform">Reserve Table</a>
                         -->
-                        <span class="navbar-text">
+
+                        
+                            <span class="navbar-text">
+                                <a role="button" id="reservebtn" class="btn btn-block nav-link btn-warning">Reserve Table</a>
+                            </span>
+                       
+                        <!--<span class="navbar-text">
                             <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-block nav-link btn-warning" href="">Reserve Table</a>
                            
-                        </span>
+                        </span>-->
                         
                     </div>
                 </div>
@@ -315,19 +329,19 @@
                                         <label for="numofguest" class="col-md-2  col-form-label">Number of Guest</label>
                                         <div class="col-md-10 align-self-center">
                                             
-                                            <input type="radio" id="one" name="guest" value="1">
-                                            <label for="one" class="mr-3">1</label>
+                                            <input type="radio" id="on" name="guest" value="1">
+                                            <label for="on" class="mr-3">1</label>
 
-                                            <input type="radio" id="two" name="guest" value="2">
-                                            <label for="two" class="mr-3">2</label>
-                                            <input type="radio" id="three" name="guest" value="3">
-                                            <label for="three" class="mr-3">3</label>
-                                            <input type="radio" id="four" name="guest" value="4">
-                                            <label for="four" class="mr-3">4</label>
-                                            <input type="radio" id="five" name="guest" value="5">
-                                            <label for="five" class="mr-3">5</label>
-                                            <input type="radio" id="six" name="guest" value="6">
-                                            <label for="six" class="mr-3">6</label>
+                                            <input type="radio" id="tw" name="guest" value="2">
+                                            <label for="tw" class="mr-3">2</label>
+                                            <input type="radio" id="thre" name="guest" value="3">
+                                            <label for="thre" class="mr-3">3</label>
+                                            <input type="radio" id="fou" name="guest" value="4">
+                                            <label for="fou" class="mr-3">4</label>
+                                            <input type="radio" id="fiv" name="guest" value="5">
+                                            <label for="fiv" class="mr-3">5</label>
+                                            <input type="radio" id="si" name="guest" value="6">
+                                            <label for="si" class="mr-3">6</label>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -411,20 +425,30 @@
     $(document).ready(function(){
         $("#mycarousel").carousel( { interval: 2000 } );
         $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');                    
+            }
+        });
 
+        $("#logininbtn").click(function(){
+            $('#loginModal').modal('show');
+        });
+        
+        $("#reservebtn").click(function(){
+            $('#reserveModal').modal('show');
+        });
+        
 
+       
     });
+   
 
    
 </script>
