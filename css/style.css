@@ -9,15 +9,15 @@
   min-height: 400px; }
 
 .footer {
-  background-color: #D1C4E9;
+  background-color: #cee3e8;
   margin: 0px auto;
   padding: 20px 0px; }
 
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575CD;
-  color: floralwhite; }
+  background: #e5ca9b;
+  color: rgb(44, 44, 44); }
 
 address {
   font-size: 80%;
@@ -29,7 +29,8 @@ body {
   z-index: 0; }
 
 .navbar-dark {
-  background-color: #512DA8; }
+  background-color: #4f799f; 
+  }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -72,3 +73,21 @@ body {
 
 #reserveModal .modal-body {
   background-color: #D1C4E9; }
+
+#courseheader {
+    background-image: url("/img/course_white.png");
+    background-size: cover;
+  }
+  /* https://css-tricks.com/text-blocks-over-image/ */
+.subtitle { 
+    color: white; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(110, 110, 110, 0.7);
+    padding: 10px; 
+ }
+
+ .input-group-addon {
+  cursor: move;
+  color: red;
+}
